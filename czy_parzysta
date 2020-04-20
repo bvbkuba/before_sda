@@ -1,4 +1,4 @@
-
+#I)
 
 def zmienna(imie,liczba):
     wynik = liczba % 2
@@ -14,3 +14,28 @@ if __name__ == '__main__':
     user_liczba = float(input(" Podaj liczbę: "))
     user_wynik = zmienna(user_name,user_liczba)
     print(f'Odpowiedź: {user_wynik}')
+    
+    
+
+#II)
+
+imie = input("Podaj imię: ")
+print("Hello ", imie, " to mój pierwszy program")
+
+y = float(input("Podaj liczbę: "))
+
+if y%2 == 0:
+    print(imie, "liczba", y , "jest parzysta")
+else:
+    print(imie, "liczba", y, "nie jest parzysta")
+
+
+
+def zmienna(imie, liczba):
+    imie = input("Twoje imie to: ")
+    liczba = input("Wprowadź liczbę: ")
+
+    if float(liczba) %2 == 0:
+        print(imie, " liczba jest parzysta")
+    else:
+        print(imie, "liczba", liczba, "nie jest parzysta")
