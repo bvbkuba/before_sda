@@ -4,7 +4,24 @@
  Jeżeli liczba jest podzielna przez dzielnik,
   funkcja powinna zwrócić wartość True, jeżeli nie jest - wartość False."""
 
+
+#I version 
 def divisible(number, divisior):
+    x = number % divisior
+    if x:
+        return False
+    else:
+        return True
+
+if __name__ == "__main__":
+    liczba = int(input("Wprowadź liczbę: "))
+    dzielnik = int(input("Wprowadź liczbę: "))
+    print(divisible(liczba,dzielnik))
+
+
+#II version
+
+def divisible2(number, divisior):
     x = number%divisior
     if x ==0:
         return True
@@ -14,4 +31,4 @@ def divisible(number, divisior):
 if __name__ == "__main__":
     liczba = int(input("Wprowadź liczbę: "))
     dzielnik = int(input("Wprowadź liczbę: "))
-    print(divisible(liczba,dzielnik))
+    print(divisible2(liczba,dzielnik))
