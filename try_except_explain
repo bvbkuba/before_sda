@@ -1,0 +1,27 @@
+""""Przy uzyciu try i except stwórz dwie funkcje, które pobiorą dane z konsoli oraz
+zwrócą nam wartość danego typu, ewentualnie dają błąd
+
+"""
+
+
+def get_input_int(text):
+    try:
+        return int(input(text))
+    except:
+        print("Wartość to nie int")
+
+def get_input_float(text):
+    try:
+        return float(input(text))
+    except:
+        print("Wartość nie jest float")
+        return
+
+if __name__=="__main__":
+    num1 = get_input_int("Podaj liczbę 1 ")
+    num2 = get_input_float("Podaj liczbe 2")
+    if num1:
+        print(num1)
+    if num2:
+        print(num2)
+
