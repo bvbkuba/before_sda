@@ -1,0 +1,19 @@
+"""4. Napisz funkcję factorial, która zwracać będzie wartość
+silni zadanej wartości. Silnia (oznaczana jako n!), dla liczb całkowitych większych od 0 stanowi
+ iloczyn tej liczby oraz wszystkich mniejszych liczb całkowitych (czyli 1! = 1, 2! = 2 * 1, 3! = 3 * 2 * 1 itd.),
+  a dla 0 0! = 0. Wykorzystaj w tym celu pętlę while."""
+
+def factorial(cyfra):
+    i = 1
+    iloczyn = 1
+    if cyfra == 0:
+        return 0
+    else:
+        while i <= cyfra:
+            iloczyn = iloczyn*i
+            i += 1
+        return iloczyn
+
+if __name__ == "__main__":
+    liczba = int(input("Wprowadź liczbę: "))
+    print(factorial(liczba))
