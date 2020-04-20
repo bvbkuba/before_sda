@@ -1,0 +1,16 @@
+
+
+def zmienna(imie,liczba):
+    wynik = liczba % 2
+    if wynik ==0:
+        result = "Cześć",imie,  "Liczba jest parzysta"
+    else:
+        result = "Liczba jest nieparzysta"
+    return result
+
+
+if __name__ == '__main__':
+    user_name = input("Podaj imię: ")
+    user_liczba = float(input(" Podaj liczbę: "))
+    user_wynik = zmienna(user_name,user_liczba)
+    print(f'Odpowiedź: {user_wynik}')
