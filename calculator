@@ -1,4 +1,4 @@
-
+#1
 lista = ["Wyjscie", "Ddodaj", "Odejmij", "Pomnoz", "Podziel"]
 def pokaz_liste():
     return lista
@@ -37,3 +37,54 @@ if __name__=="__main__":
         print(f" Wynik mnożenia cyfr {pierwsza_cyfra} i {druga_cyfra} to: {Pomnoz(pierwsza_cyfra,druga_cyfra)}")
     elif wyswietlanie ==4:
         print(f" Wynik dzielenia cyfr {pierwsza_cyfra} i {druga_cyfra} to:{round(Podziel(pierwsza_cyfra,druga_cyfra),2)}")
+
+
+
+
+#2part
+"""Zad
+Masz liste ["Wyjscie", "Ddodaj", "Odejmij", "Pomnoz", "Podziel"]
+(nie dotyczy wartosci Wyjscie)
+1 Stworz funkcje o takich samych nazwach jak w liscie,
+2 kazda funkcja przyjmuje 2 parametry liczbowe i zwraca wynik ich dzialania
+3 na podstawie listy stworz menu ktore bedzie wyswietlane na ekranie
+4 po wyswietleniu Menu czekaj na akcje z konsoli i po wybraniu odpowiedniego numerka wykonaj czynnosc dla danej akcji
+4.1 dla wyjscie wyjdz
+4.2 dla innych funkcji - pobierz 2 wartosci z konsoli do zmiennych a i b
+4.3 uruchom odpowiednia funkcje z pobranymi parametrami i wyswietl wynik"""
+
+lista = ["Wyjscie", "Ddodaj", "Odejmij", "Pomnoz", "Podziel"]
+def pokaz_liste():
+    return lista
+def Dodaj(x,y):
+    return x+y
+def Odejmij(x,y):
+    return x-y
+def Pomnoz(x,y):
+    return x*y
+def Podziel(x,y):
+    return x/y
+dlugosc = len(lista)
+menu = []
+
+for i in range(dlugosc):
+        menu.append(lista[i]+ str([i]))
+
+if __name__=="__main__":
+
+    wyswietlanie = int(input(f"Wprowadź odpowiedni numer menu od 0 do {dlugosc-1} : {menu}"))
+    if wyswietlanie == 0:
+        exit()
+    pierwsza_cyfra = int(input("Wprowadź pierwszą cyfrę: "))
+    druga_cyfra = int(input("Wprowadź drugą cyfrę: "))
+
+    if wyswietlanie == 0:
+        exit()
+    elif wyswietlanie == 1:
+        print(f" Wynik dodawania cyfr {pierwsza_cyfra} i {druga_cyfra} to: {Dodaj(pierwsza_cyfra,druga_cyfra)}")
+    elif wyswietlanie == 2:
+        print(f" Wynik odejmowania cyfr {pierwsza_cyfra} i {druga_cyfra} to: {Odejmij(pierwsza_cyfra,druga_cyfra)}")
+    elif wyswietlanie ==3:
+        print(f" Wynik mnożenia cyfr {pierwsza_cyfra} i {druga_cyfra} to: {Pomnoz(pierwsza_cyfra,druga_cyfra)}")
+    elif wyswietlanie ==4:
+        print(f" Wynik dzielenia cyfr {pierwsza_cyfra} i {druga_cyfra} to:{float(Podziel(pierwsza_cyfra,druga_cyfra))}")
