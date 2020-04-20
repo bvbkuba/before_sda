@@ -1,0 +1,13 @@
+"""3. Napisz funkcję sum_up, która przyjmuje liczbę number.
+ Jej zadaniem jest obliczanie sumy wartości od 0 do zadanej wartości number (przykładowo, sum_up(3) powinno zwrócić liczbę 1+2+3=6,
+ natomiast sum_up(5) powinno zwrócić 1+2+3+4+5=15)."""
+
+def sum_up(number):
+    suma = 0
+    for x in range(number+1):
+        suma = suma + x
+    print(suma)
+
+if __name__ == "__main__":
+    liczba = int(input("Wprowadź liczbę: "))
+    sum_up(liczba)
