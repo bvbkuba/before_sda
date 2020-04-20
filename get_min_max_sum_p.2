@@ -1,0 +1,34 @@
+lista = [3, 6, 12, 333, 1, 988, 22121, 4, 22]
+def getmax(tablica):
+    max = tablica[0]
+    for i in tablica:
+        if i>max:
+            max=i
+
+    return max
+print(getmax(lista))
+
+def getmin(tablica):
+    min = tablica[0]
+    for i in tablica:
+        if i<min:
+            min=i
+
+    return min
+print(getmin(lista))
+"""4. Napisz metodę getSum, która przyjmie za parametr tablicę intów, a któa zwróci sumę jej elementów."""
+def getSum(tablica):
+    suma = 0
+    for i in tablica:
+        suma = suma + i
+    return suma
+print(getSum(lista))
+
+
+def getMinMaxSum(tablica):
+    suma = getSum(tablica)
+    minimum = getmin(tablica)
+    maximum = getmax(tablica)
+    rozwiazanie = [minimum,maximum,suma]
+    return rozwiazanie
+print(getMinMaxSum(lista))
