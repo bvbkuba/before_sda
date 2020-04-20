@@ -1,0 +1,17 @@
+"""2. Napisz funkcję divisible, która przyjmuje liczbę number oraz dzielnik divisor.
+ Jej zadaniem jest sprawdzenie, czy liczba jest podzielna przez dzielnik.
+  Wykorzystaj w tym celu dzielenie modulo %.
+ Jeżeli liczba jest podzielna przez dzielnik,
+  funkcja powinna zwrócić wartość True, jeżeli nie jest - wartość False."""
+
+def divisible(number, divisior):
+    x = number%divisior
+    if x ==0:
+        return True
+    else:
+        return False
+
+if __name__ == "__main__":
+    liczba = int(input("Wprowadź liczbę: "))
+    dzielnik = int(input("Wprowadź liczbę: "))
+    print(divisible(liczba,dzielnik))
