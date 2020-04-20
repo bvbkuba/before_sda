@@ -1,0 +1,10 @@
+def suma_liczb(x,y):
+    suma = x+y
+    for i in range(suma):
+        print("obliczenia")
+
+if __name__ == "__main__":
+    x = int(input("Wprowadź pierwszą cyfrę: "))
+    y = int(input("Wprowadź druga cyfrę: "))
+    suma_liczb(x,y)
+
