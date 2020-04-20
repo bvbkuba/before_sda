@@ -1,0 +1,39 @@
+
+lista = ["Wyjscie", "Ddodaj", "Odejmij", "Pomnoz", "Podziel"]
+def pokaz_liste():
+    return lista
+def Dodaj(x,y):
+    return x+y
+def Odejmij(x,y):
+    return x-y
+def Pomnoz(x,y):
+    return x*y
+def Podziel(x,y):
+    return x/y
+dlugosc = len(lista)
+menu = []
+
+for i in range(dlugosc):
+        menu.append(lista[i]+ str([i]))
+
+if __name__=="__main__":
+
+    for liczba in range(0,dlugosc):
+        print(menu[liczba])
+
+    wyswietlanie = int(input(f"Wprowadź odpowiedni numer menu od 0 do {dlugosc-1} "))
+    if wyswietlanie == 0:
+        exit()
+    pierwsza_cyfra = int(input("Wprowadź pierwszą cyfrę: "))
+    druga_cyfra = int(input("Wprowadź drugą cyfrę: "))
+
+    if wyswietlanie == 0:
+        exit()
+    elif wyswietlanie == 1:
+        print(f" Wynik dodawania cyfr {pierwsza_cyfra} i {druga_cyfra} to: {Dodaj(pierwsza_cyfra,druga_cyfra)}")
+    elif wyswietlanie == 2:
+        print(f" Wynik odejmowania cyfr {pierwsza_cyfra} i {druga_cyfra} to: {Odejmij(pierwsza_cyfra,druga_cyfra)}")
+    elif wyswietlanie ==3:
+        print(f" Wynik mnożenia cyfr {pierwsza_cyfra} i {druga_cyfra} to: {Pomnoz(pierwsza_cyfra,druga_cyfra)}")
+    elif wyswietlanie ==4:
+        print(f" Wynik dzielenia cyfr {pierwsza_cyfra} i {druga_cyfra} to:{round(Podziel(pierwsza_cyfra,druga_cyfra),2)}")
