@@ -1,0 +1,60 @@
+lista = [3, 6, 12, 333, 1, 988, 22121, 4, 22]
+for i in lista:
+    print(i)
+
+
+def getMax(tablica):
+    y = max(tablica)
+    return y
+print(getMax(lista))
+
+
+def getMin(tablica):
+    return min(tablica)
+
+print(getMin(lista))
+
+def sumInt(tablica):
+    return sum(tablica)
+print(sumInt(lista))
+
+"""5. Napisz metodę getMaxMinAndSum, która przyjmie za parametr tablicę intów, a która zwróci
+ tablicę trzyelementową, której pierwszy element to wartość największa, 
+ drugi to najmniejsza, a trzeci suma wszystkich elementów. """
+
+def getMaxMinAndSum(tablica):
+    max = getMax(tablica)
+    min = getMin(tablica)
+    suma = sumInt(tablica)
+    return "Max to", max, "Min to ",min, "Suma to", suma
+print(getMaxMinAndSum(lista))
+
+"""6. Napisz metodę getLarger, która przyjmie za parametry dwie tablice intów, a która zwróci tę tablicę, 
+której suma elementów jest większa. """
+
+lista = [3, 6, 12, 333, 1, 988, 22121, 4, 22]
+lista2=[0, 1, 2, 3, 4, 5, 6]
+def getLarger(tablica1,tablica2):
+    sum1 = sum(tablica1)
+    sum2 = sum(tablica2)
+    if sum1>sum2:
+        print("Większa to", tablica1)
+    else:
+        print ("Większa to: ",tablica2)
+print(getLarger(lista,lista2))
+
+
+"""7. Napisz metodę merge, która za parametry dwie tablice intów, a
+ która zwróci tablicę, która zawierać będzie wszystkie elementy z
+  jednej i drugiej tablicy."""
+lista = [3, 6, 12, 333, 1, 988, 22121, 4, 22]
+lista2=[0, 1, 2, 3, 4, 5, 6]
+def merge(tablica1,tablica2):
+    y = []
+    y= tablica2+tablica1
+    return y
+print(merge(lista2,lista))
+
+if __name__ == "__main__":
+    zbior = set(merge(lista2,lista))
+    print(zbior)
